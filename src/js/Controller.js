@@ -26,10 +26,10 @@ export default class Controller {
     // Обработчик события клика по кнопке добавления тикета
     btnAdd.addEventListener('click', (e) => {
       e.preventDefault(); // Предотвращение стандартного поведения кнопки
-      
+
       // Создание модального окна и получение его элементов управления
-    const modal = new Modal();
-    const { inpShort, textFull, cancelBtn, okBtn, removeModal } = modal.addOrEditTicket();
+      const modal = new Modal();
+      const { inpShort, textFull, cancelBtn, okBtn, removeModal } = modal.addOrEditTicket();
 
       // Обработчик события клика по кнопке "ОК" в модальном окне
       okBtn.addEventListener('click', async (ev) => {
@@ -71,7 +71,7 @@ export default class Controller {
     } = ticketItem.getTicket(); // Получение элементов управления тикетом
 
     this.ticketslist.append(ticketElm); // Добавление тикета в список
-    
+
     // Обработчик события клика по кнопке "Редактировать" в тикете
     editBtn.addEventListener('click', async (ev) => {
       ev.preventDefault(); // Предотвращение стандартного поведения кнопки
@@ -162,8 +162,8 @@ export default class Controller {
       await this.requests.getTicketById(ticket);
       const descrElm = ticketItem.getTicketDescription(this.requests.ticket);
 
-      if (ticketElm.contains(descrElm)) { 
-        return descrElm.remove(); // Если описание уже отображено, скрыть его 
+      if (ticketElm.contains(descrElm)) {
+        return descrElm.remove(); // Если описание уже отображено, скрыть его
       }
 
       ticketElm.append(descrElm); // Если описание не отображено, добавить его

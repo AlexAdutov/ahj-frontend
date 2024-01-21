@@ -16,12 +16,12 @@ export default class Ticket {
     <button class="tickets-list__item-edit-btn">&#9998</button>
     <button class="tickets-list__item-delete-btn">X</button>
     
-    `; 
+    `;
   }
 
   // Метод для создания и возвращения объекта с элементами управления тикетом
   getTicket() {
-    console.log(this.data) //дебугер
+    console.log(this.data); // дебугер
     this.ticketElm = document.createElement('li'); // Создание элемента списка для тикета
     this.ticketElm.classList.add('tickets-list__item'); // Добавление класса для стилизации
     this.ticketElm.innerHTML = Ticket.getHTML(); // Заполнение HTML-разметкой
@@ -29,7 +29,6 @@ export default class Ticket {
 
     const nameElm = this.ticketElm.querySelector('.tickets-list__item-name'); // Элемент для отображения имени тикета
     nameElm.innerText = this.data.name; // Установка имени тикета
-
 
     this.ticketElm.querySelector('.tickets-list__item-created').innerText = formatedDateTime; // Установка даты и времени создания тикета
 
@@ -45,7 +44,8 @@ export default class Ticket {
       statusBox.checked = this.data.status; // Обновление статуса тикета
     };
 
-    const onRemoveTicket = () => { this.ticketElm.remove(); }; // Метод для удаления элемента списка тикетов
+    // Метод для удаления элемента списка тикетов
+    const onRemoveTicket = () => { this.ticketElm.remove(); };
 
     return {
       ticketElm: this.ticketElm,

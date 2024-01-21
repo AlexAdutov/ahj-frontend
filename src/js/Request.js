@@ -12,7 +12,7 @@ export default class Requests {
     return this._ticket;
   }
 
- // Геттер для получения массива всех тикетов
+  // Геттер для получения массива всех тикетов
   get ticketsArr() {
     return this._ticketsArr;
   }
@@ -49,7 +49,7 @@ export default class Requests {
         },
       );
       const data = await response.json();
-      console.log(data);
+      console.log(data); // дебугер
       this._ticketsArr = data; // Обновление массива всех тикетов
     } catch (err) { console.log(err); }
   }
@@ -89,8 +89,8 @@ export default class Requests {
           body: JSON.stringify(rest),
         },
       );
-      console.log(response.json()); //дебугер
-      return await response.json();  // Возвращение данных об обновленном тикете
+      console.log(response.json()); // дебугер
+      return await response.json(); // Возвращение данных об обновленном тикете
     } catch (err) {
       console.log(err);
       return err;
