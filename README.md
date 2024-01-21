@@ -12,6 +12,10 @@
 
 ---
 
+[![Build status](https://ci.appveyor.com/api/projects/status/r0i3dn9ihs1f3l9g/branch/main?svg=true)](https://ci.appveyor.com/project/AlexAdutov/ahj-frontend/branch/main)
+
+[![Build status](https://ci.appveyor.com/api/projects/status/r0i3dn9ihs1f3l9g/branch/main?svg=true)](https://ci.appveyor.com/project/AlexAdutov/ahj-frontend/branch/main)
+
 ### HelpDesk: Frontend
 
 #### Легенда
