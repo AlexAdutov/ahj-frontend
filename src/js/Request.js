@@ -89,7 +89,7 @@ export default class Requests {
           body: JSON.stringify(rest),
         },
       );
-      console.log(response.json()); // дебугер
+      //console.log(await response.json()); // дебугер
       return await response.json(); // Возвращение данных об обновленном тикете
     } catch (err) {
       console.log(err);
